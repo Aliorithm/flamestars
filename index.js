@@ -54,10 +54,10 @@ let clickCount = 0; // Tracks consecutive clicks to manage breaks
     try {
       // ANTI-DETECTION: Check if we should take a break
       // Only allows a break after at least 15 clicks (~25-30 mins of work)
-      if (clickCount >= 15) {
+      if (clickCount >= 30) {
         if (Math.random() < 0.15) {
           // 15% chance to rest after the work threshold
-          const breakMins = 20 + Math.floor(Math.random() * 25); // 20 to 45 mins
+          const breakMins = 10 + Math.floor(Math.random() * 10); // 20 to 45 mins
           console.log(
             `☕ Work session complete (${clickCount} clicks). Resting for ${breakMins} mins...`
           );
